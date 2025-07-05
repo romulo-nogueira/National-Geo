@@ -39,6 +39,41 @@
     text-indent: 40px;
 }
 
+/*Inserindo Manipulação no JavaScript*/
+
+[data-accordion="accordion"] dd{
+    display: none;
+    
+}
+
+[data-accordion="accordion"] dd.ativo{
+    display: block;
+    animation: anima-curiosidade 0.9s forwards;
+}
+
+[data-accordion="accordion"] dt::after {
+    content: "⬎";
+    margin-left: 5px;
+}
+[data-accordion="accordion"] dt.ativo::after {
+    content: "⬏";
+    margin-left: 5px;
+}
+
+@keyframes anima-curiosidade {
+    from{opacity: 0;
+        transform: translate3d(25px,-25px, 0);
+    
+    }
+
+    to{
+        opacity: 1;
+        transform: translate3d(10px, 10px,10px);
+    }
+}
+
+
+
 @media (max-width:650px) {
     .list-curiosidades{
         grid-column: 1/3;
