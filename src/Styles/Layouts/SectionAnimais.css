@@ -14,9 +14,10 @@
     scrollbar-color: var(--cor3) var(--cor5);
 }
 
-/* .animais-description{
-    border: 3px solid blue;
-} */
+ .animais-description{
+    grid-column: 3;
+    padding-right: 15px;
+} 
 
 .animais-description section{
     /* border: 3px solid lightblue; */
