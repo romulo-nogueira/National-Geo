@@ -12,15 +12,25 @@
 
 <body>
     <div class="grid-container">
-        <img src="src/assetes/images/Logo.png" alt="">
+        
         <!-- Início cabeçalho-->
         <header class="menu">
-
+            <div class="div-image">
+                <img src="src/assetes/images/Logo.png" alt="">
+            </div>
             <nav>
-                <ul>
+                <ul data-menu="list">
                     <li><a href="#animais">animais</a></li>
                     <li><a href="#curiosidades">curiosidades</a></li>
-                    <li><a href="#">sobre</a></li>
+                    <li data-dropMenu="menuDrop">
+                        <a href="#">sobre</a>
+                        <ul class="drop-down-menu">
+                            <li><a href="">Empresa</a></li>
+                            <li><a href="">Equipe</a></li>
+                            <li><a href="">Serviços</a></li>
+                            <li><a href="">Parceiros</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#contatos">contato</a></li>
                     <li><a href="#">login ⇨</a></li>
                 </ul>

@@ -1,0 +1,88 @@
+[data-dropMenu="menuDrop"]{
+    position: relative;
+
+}
+
+.drop-down-menu::before{
+    /* content: "⯅";
+    color:var(--cor6);
+    border: #ffffff;
+    bottom: 118.04px;
+    font-size: 25px;
+    position: absolute;
+    border: #000;
+    left: 20px;*/
+    content: "";
+    display: block;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+        top: -12px;
+        left: 10px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid var(--cor6);    
+
+} 
+
+/*Manipulando o JS*/
+
+[data-dropMenu="menuDrop"] .drop-down-menu{
+    display: none;
+    
+}
+[data-dropMenu="menuDrop"]:hover .drop-down-menu,
+[data-dropMenu="menuDrop"].ativo .drop-down-menu{
+    display: block;
+    animation: dropDown .7s forwards;
+    
+}
+
+/*Fim da manipulação Js*/
+/*Animação*/
+ 
+@keyframes dropDown{
+    from{
+        opacity: 0;
+        transform: translate(0,-30px,0);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0,0,0);
+    }
+}
+
+/*Fim da animação*/
+
+.drop-down-menu{
+    background-color: var(--cor6);
+    border-radius: 3px;
+    border: 2px solid var(--cor4);
+    position: absolute;
+    padding: 1px;
+}
+
+.drop-down-menu li a{
+    text-decoration: none;
+    color: var(--cor4);
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: bold;    
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 1.5px;
+    padding: 7px;
+    /* padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px; */
+    margin-right: 10px;
+    display: block;
+
+
+}
+
+.drop-down-menu li a:hover{
+    color: var(--cor5);
+    
+}
+

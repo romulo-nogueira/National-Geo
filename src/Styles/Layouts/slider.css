@@ -13,15 +13,16 @@
     cursor: pointer;
     padding: 10px;
     color: var(--cor3);
+    user-select: none;/*É usada para impedir que o usuario selecione texto ou outros elementos da pagina*/
 }
 
-.preview{
+/* .preview{
 
 }
 
 .next{
 
-}
+} */
 
 .slider{
     /* border: 5px solid yellow; */
